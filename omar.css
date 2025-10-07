@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #222;
+    color: white;
+}
+.cruds{
+    width: 80%;
+    margin: auto;
+    font-family: system-ui;
+}
+
+.head{
+text-transform: uppercase;
+text-align: center;
+margin: 10px 0px;
+}
+.price input {
+width: 20%;
+}
+#total::before{
+    content: "Total:";
+   
+}
+#total{
+  
+    background-color: red;
+    padding: 5px 2px;
+    border-radius: 5px;
+}
+
+
+input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    margin: 4px;
+    padding: 5px;
+    background-color: #111;
+    color: white;
+    border-radius: 4px;
+
+}
+input:focus{
+    background-color: #000;
+    transform: scale(1.1);
+    color:white;
+    
+}
+button{
+    width: 100%;
+    height: 30px;
+   cursor: pointer;
+   background-color: #470053;
+   color: white;
+   border-radius: 10px;
+   transition: 0.5s;
+}
+button:hover{
+    background-color: #51025f;
+    letter-spacing: 2px;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+.button button{
+    width: 45%;
+}
+table{
+    width: 100%;
+  margin: 10px;
+  text-align: center;
+    border-collapse: collapse;
+
+}
+td{
+
+    padding: 15px;
+
+
+}
+  #delete{
+    margin: 20px;
+
+    }
+ 
+/* ✅ يخلي الجدول Responsive تحت 768px */
+@media (max-width:768px) {
+    .price input{
+        display: block;
+        width: 100%;
+    }
+    .price small{
+        display: block;
+        width: 104%;
+    }
+    table th{
+        display: none;
+    }
+    table td{
+      display: flex;
+      flex-direction: column;
+     align-items: flex-end;
+    }
+    table td button{
+        width: 20%;
+        
+      
+    }
+    table td button{
+        font-size: 10px;
+        width: fit-content;
+        padding: 10px;
+    }
+    table tr{
+        border-bottom: 2px solid  brown;
+    }
+    table{
+        background-color: #111;
+      
+    }
+ 
+    table td::before{
+        content: attr(data-title) ":";
+        position: relative;
+        top: 20px;
+       
+       width: 100%;
+       text-align: left;
+    }
+    .button{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      
+    }
+    .button button{
+        width: 100%;
+    }
+}
+@media (min-width:770px) and (max-width:1140px) {
+    .price small{
+        display: block;
+        width: 100% 
+    }
+}

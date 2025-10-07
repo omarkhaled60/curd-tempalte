@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="omar.css">
+</head>
+<body >
+<div class="cruds">
+  <div class="head">
+    <h2>crud</h2>
+    <p>product management system</p>
+  </div>
+  <div class="inputs">
+    
+      <input type="text" placeholder="title" id="title">
+    <div class="price">
+      <input  onkeyup="getTotal()" type="number" placeholder="price" id="price">
+      <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+      <input  onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+      <input  onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+      <small id="total">32132</small>
+    </div>
+    <input type="text"  placeholder="count" id="count">
+    <input type="text"  placeholder="category" id="category">
+    <button type="submit" id="button">Create</button>
+  </div>
+  <div class="outputs">
+    <input onkeyup="search(this.value)" type="text" placeholder="Serach" name="" id="serach">
+    <div class="button">
+      <button onclick="searchdata(this.id)" id="search by title">Search By Title</button>
+      <button onclick="searchdata(this.id)" id="search by category">Search By category</button>
+    </div>
+
+  </div>
+  <div id="delete">
+    
+  </div>
+<table id="myTable"> 
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>price</th>
+    <th>taxes</th>
+    <th>ads</th>
+    <th>discount</th>
+    <th>total</th>
+    <th>category</th>
+    <th>update</th>
+    <th>delete</th>
+
+  </tr>
+  <tbody id="tbody">
+
+  </tbody>
+ 
+
+</table>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
